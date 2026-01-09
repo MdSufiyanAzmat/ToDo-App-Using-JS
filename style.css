@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container{
+    background-color: rgb(141, 123, 123);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    max-width: 100%;
+    min-height: 500px;
+    padding: 20px;
+}
+h1{
+    padding: 15px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+.add {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+}
+input{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 4px;
+    width: 100%; 
+    max-width: 400px;
+    font-size: 16px;
+}
+input:hover{
+    border: 2px solid yellow;
+}
+input:focus{
+    border: 2px solid green;
+}
+.addTask{
+    border: none;
+    padding: 10px 20px; /* INCREASED padding */
+    background-color: red;
+    color: white;
+    width: 150px; /* INCREASED width */
+    border-radius: 5px; /* INCREASED border-radius */
+    cursor: pointer;
+    font-size: 16px; /* ADDED font size */
+    font-weight: bold; /* ADDED bold text */
+    transition: all 0.3s ease; /* ADDED transition */
+}
+.addTask:hover {
+    background-color: rgb(16, 172, 16);
+    color: black;
+    transform: scale(1.05); /* ADDED scale effect */
+}
+.jsBtn{
+    background-color: red;
+}
+.js{
+    padding: 5px 5px;
+    margin: 10px;
+    background-color: rgb(219, 206, 206);
+    border-radius: 3px;
+    /* height: 50px; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    position: relative;
+}
+.jsLi{
+    font-weight: bold;
+    font-size: 20px;
+    list-style-type: none;
+}
+.jsBtn{
+    background-color: rgb(241, 124, 124);
+    padding: 5px 5px;
+    border-radius: 3px;
+    position: absolute;
+    right: 2px;
+}
+.items ul{
+    list-style-type: none;
+    max-height: 300px; /* ADDED max-height */
+    overflow-y: auto; 
+}
+.js{ 
+    padding: 12px 15px; /* INCREASED padding */
+    margin: 10px 0; /* CHANGED margin */
+    background-color: rgb(219, 206, 206);
+    border-radius: 5px; /* INCREASED border-radius */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* CHANGED to space-between */
+    position: relative;
+    border-left: 4px solid #4CAF50; /* ADDED left border for visual */
+    transition: all 0.3s ease; /* CHANGED from 3s to 0.3s */
+}
+
+.js:hover {
+    background-color: rgb(200, 190, 190); /* ADDED hover effect */
+    transform: translateX(5px); /* ADDED slight movement on hover */
+}
+
+.jsLi {
+    font-weight: bold;
+    font-size: 18px; /* SLIGHTLY reduced font size */
+    list-style-type: none;
+    flex-grow: 1; /* ADDED to take available space */
+    padding-right: 50px; /* ADDED space for delete button */
+    word-break: break-word; /* ADDED for long text */
+}
+
+.jsBtn {
+    background-color: rgb(241, 124, 124);
+    padding: 8px 12px; /* INCREASED padding */
+    border-radius: 4px;
+    border: none; /* ADDED to remove default border */
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease; /* ADDED transition */
+    position: absolute; /* KEPT absolute positioning */
+    right: 10px; /* ADJUSTED position */
+}
+.jsLi.completed {
+    text-decoration: line-through;
+    color: red;
+    opacity: 0.7;
+}
+
+/* ADDED empty state message */
+.empty-message {
+    text-align: center;
+    color: red;
+    font-style: italic;
+    margin-top: 50px;
+    font-size: 18px;
+}
